@@ -1,0 +1,7 @@
+langgraph>=0.2.60,<0.3
+openai
+tenacity
+python-dotenv
+pydantic>=2,<3
+pytest
+pytest-asyncio

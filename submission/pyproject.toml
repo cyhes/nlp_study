@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nlp-orchestrator"
+version = "0.1.0"
+description = "Parallel NLP subagent orchestrator built on LangGraph (supervisor -> concurrent workers -> aggregator)"
+requires-python = ">=3.10"
+dependencies = [
+    "langgraph>=0.2.60,<0.3",
+    "openai",
+    "tenacity",
+    "python-dotenv",
+    "pydantic>=2,<3",
+]
+
+[project.optional-dependencies]
+test = ["pytest", "pytest-asyncio"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
